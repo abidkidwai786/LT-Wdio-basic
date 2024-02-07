@@ -83,8 +83,8 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-            " Name": "Chrome",
-            " Version": "122.0",
+            "browserName": "Chrome",
+            "browseVersion": "122.0",
             "LT:Options": {
                 "platformName": "Windows 10",
                 "project": "Untitled",
