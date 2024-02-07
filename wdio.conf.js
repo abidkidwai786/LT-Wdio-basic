@@ -10,7 +10,7 @@ export const config = {
     // =====================
     // Host address of the running Selenium server. This information is usually obsolete as
     // WebdriverIO automatically connects to localhost. Also, if you are using one of the
-    // supported cloud services like Sauce Labs, Browserstack, Testing Bot or LambdaTest you don't
+    // supported cloud services like Sauce Labs,   , Testing Bot or LambdaTest you don't
     // need to define host and port information because WebdriverIO can figure that out
     // according to your user and key information. However, if you are using a private Selenium
     // backend you should define the host address, port, and path here.
@@ -22,7 +22,7 @@ export const config = {
     // =================
     // Service Providers
     // =================
-    // WebdriverIO supports Sauce Labs, Browserstack, Testing Bot and LambdaTest (other cloud providers
+    // WebdriverIO supports Sauce Labs,   , Testing Bot and LambdaTest (other cloud providers
     // should work too though). These services define specific user and key (or access key)
     // values you need to put in here in order to connect to these services.
     //
@@ -83,9 +83,15 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome',
-        geoLocation: 'AU/AL',
-    }],
+            " Name": "Chrome",
+            " Version": "122.0",
+            "LT:Options": {
+                "platformName": "Windows 10",
+                "project": "Untitled",
+                "selenium_version": "4.0.0",
+                "w3c": true
+            }
+        }],
 
     //
     // ===================
@@ -99,7 +105,6 @@ export const config = {
     // Set specific log levels per logger
     // loggers:
     // - webdriver, webdriverio
-    // - @wdio/browserstack-service, @wdio/devtools-service, @wdio/sauce-service
     // - @wdio/mocha-framework, @wdio/jasmine-framework
     // - @wdio/local-runner
     // - @wdio/sumologic-reporter
@@ -124,7 +129,7 @@ export const config = {
     waitforTimeout: 10000,
     //
     // Default timeout in milliseconds for request
-    // if browser driver or grid doesn't send response
+    // if   driver or grid doesn't send response
     connectionRetryTimeout: 120000,
     //
     // Default request retries count
@@ -232,10 +237,10 @@ export const config = {
     // },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
-     * variables like `browser`. It is the perfect place to define custom commands.
+     * variables like ` `. It is the perfect place to define custom commands.
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs        List of spec file paths that are to be run
-     * @param {object}         browser      instance of created browser/device session
+     * @param {object}                instance of created  /device session
      */
     // before: function (capabilities, specs) {
     // },
@@ -279,7 +284,7 @@ export const config = {
      * @param {IPickle}            scenario         scenario pickle
      * @param {object}             result           results object containing scenario results
      * @param {boolean}            result.passed    true if scenario has passed
-     * @param {string}             result.error     error stack if scenario failed
+     * @param {string}             result.error     error   if scenario failed
      * @param {number}             result.duration  duration of scenario in milliseconds
      * @param {object}             context          Cucumber World object
      */
@@ -291,7 +296,7 @@ export const config = {
      * @param {ITestCaseHookParameter} world            world object containing information on pickle and test step
      * @param {object}                 result           results object containing scenario results
      * @param {boolean}                result.passed    true if scenario has passed
-     * @param {string}                 result.error     error stack if scenario failed
+     * @param {string}                 result.error     error   if scenario failed
      * @param {number}                 result.duration  duration of scenario in milliseconds
      * @param {object}                 context          Cucumber World object
      */
