@@ -14,11 +14,16 @@ The 2 Cucumber scenarios will run against a dummy site.
 From https://automation.lambdatest.com/test you see under the test `MetaData` > `Input Config` the following:
 
 ```json
-"desiredCapabilities":{
-  "geoLocation":"C2",
-  "geoLocationUserCode":"AU/AL",
-  "geoLocationVendor":"GeoEdge",
-}
+capabilities: [{
+        "browserName": "Chrome",
+        "browserVersion": "122.0",
+        "LT:Options": {
+            "platformName": "Windows 10",
+            "project": "Untitled",
+            "selenium_version": "4.0.0",
+            "w3c": true
+        }
+    }],
 ```
 
 👏👏👏
